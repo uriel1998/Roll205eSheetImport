@@ -1,6 +1,6 @@
 # Roll205eSheetImport
 
-**Note**: The "I" and "me" in this file does not refer to [uriel1998](https://github.com/uriel1998); that is in `README_NEXT`. This README has only been edited for clarity from the original by [Zanthox](https://github.com/Zanthox). 
+**Note**: The "I" and "me" in this file does not refer to [uriel1998](https://github.com/uriel1998); that is in [README_NEXT](https://github.com/uriel1998/Roll205eSheetImport/blob/main/README_NEXT.md). This README has only been edited for clarity from the original by [Zanthox](https://github.com/Zanthox). 
 
 ## Introduction
 
