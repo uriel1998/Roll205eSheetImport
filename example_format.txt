@@ -1,0 +1,24 @@
+Facehugger
+Tiny monstrosity, unaligned
+Armor Class 13
+Hit Points 10 (3d4 + 3)
+Speed 30 ft., climb 30 ft.
+
+STR DEX CON INT WIS CHA
+6 (-2) 16 (+3) 12 (+1) 2 (-4) 10 (+0) 3 (-4)
+
+Skills Stealth +5
+Senses blindsight 10 ft., darkvision 30 ft., passive Perception 10
+Languages -
+Challenge 1/4 (50 XP)
+
+Leap Ambusher. If the facehugger moves at least 10 ft. straight toward a target, it can leap and attempt to attach.
+
+Low Profile. The facehugger has advantage on Stealth checks in dim light or cluttered terrain.
+
+Actions
+
+Leap Attach. Melee Weapon Attack: +5 to hit, reach 5 ft., one target.
+Hit: 1 (1d4 - 1) suffocation damage, and the target is grappled and restrained (escape DC 13). While attached, the target is blinded and silenced, cannot cast spells with verbal components, and takes 1 (1d4 - 1) suffocation damage at the start of each of its turns. The facehugger detaches if it takes 5 or more damage from a single hit or if the host succeeds on a DC 13 Strength check as an action. When it detaches, the target must succeed on a DC 12 Constitution saving throw or be stunned for 1d4 rounds.
+
+Implant. If the facehugger remains attached at the start of its second turn, the target must succeed on a DC 13 Constitution saving throw or become implanted. After 1d4 hours, the target drops to 0 hit points. The implant can be removed by Lesser Restoration with a successful DC 13 Constitution check, a DC 25 Medicine check, or by receiving 10 or more hit points of magical healing in a single instance.

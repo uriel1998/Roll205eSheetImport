@@ -1,0 +1,92 @@
+# Reference / local scratch
+1_reference/
+.codex
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / IDE junk
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Office temp files
+~$*.*
+
+# Logs
+*.log
+
+# Python caches and virtualenvs
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# Python tooling caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.pyre/
+.dmypy.json
+dmypy.json
+
+# Coverage
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+nosetests.xml
+*.cover
+
+# Packaging / build outputs
+build/
+dist/
+site/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+*.egg
+MANIFEST
+
+# Notebook / REPL metadata
+.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# Environment / local config
+.env
+.env.*
+
+# C / C++ / native build artifacts
+*.d
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
+*.so
+*.dylib
+*.dll
+*.mod
+*.smod
+*.lai
+*.la
+*.a
+*.lib
+*.exe
+*.out
+*.app

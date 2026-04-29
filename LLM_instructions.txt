@@ -1,0 +1,120 @@
+Convert the source creature sheet into the exact statblock format below so it can be parsed by a strict Roll20 importer.
+
+Output requirements:
+- Plain text only.
+- Preserve all mechanics and numbers unless impossible.
+- Do not add commentary or explanations.
+- Use standard 5e statblock wording and layout.
+- Each field must appear on its own line.
+- Never abbreviate these labels:
+Armor Class
+Hit Points
+Speed
+Saving Throws
+Skills
+Damage Vulnerabilities
+Damage Resistances
+Damage Immunities
+Condition Immunities
+Senses
+Languages
+Challenge
+Traits
+Actions
+Bonus Actions
+Legendary Actions
+Reactions
+- The creature header must be:
+Line 1: creature name
+Line 2: "Size type, alignment"
+- Ability scores must be formatted as:
+STR DEX CON INT WIS CHA
+10 (+0) 14 (+2) 12 (+1) 8 (-1) 10 (+0) 6 (-2)
+- Every trait/action/reaction name must end with a period.
+- If the source has a trait or action name without punctuation, add a period.
+- If the source uses "AC", rewrite to "Armor Class".
+- If the source uses "HP", rewrite to "Hit Points".
+- If the source uses "CR", rewrite to "Challenge" and include XP in parentheses.
+- If alignment is missing, use "unaligned" unless the source clearly implies something else.
+- If Languages is missing, output "Languages -".
+- If passive Perception is missing, derive it from Wisdom/Perception if possible; otherwise use 10.
+- For attacks, normalize to this style:
+
+Claw. Melee Weapon Attack: +5 to hit, reach 5 ft., one target.
+Hit: 6 (1d6 + 3) slashing damage.
+
+- If the source gives only one damage expression like "1d6+3 slashing damage", convert it into a proper Hit line. If no average is given, calculate and add it.
+- Keep all non-attack rider text after the Hit line.
+- Separate sections with blank lines.
+- Do not combine Armor Class, Hit Points, and Speed on one line.
+- Do not output markdown.
+- Always include an `Actions` section, even if the creature has no true attack. If needed, create a simple non-damaging action such as:
+
+Escape. The creature takes the Dash or Disengage action.
+
+- If the creature has traits but no attacks, still include at least one action under `Actions`. Without an `Actions` header and at least one action entry, this importer may misclassify trait lines as actions.
+- Do not output placeholder lines such as `Saving Throws -`, `Skills -`, `Damage Vulnerabilities -`, `Damage Resistances -`, `Damage Immunities -`, or `Condition Immunities -` unless the source explicitly needs them. Omit absent sections instead of filling them with `-`.
+- Prefer this section order:
+Name
+Size type, alignment
+Armor Class ...
+Hit Points ...
+Speed ...
+blank line
+STR DEX CON INT WIS CHA
+scores line
+blank line
+Saving Throws ... if present
+Skills ... if present
+Damage Vulnerabilities ... if present
+Damage Resistances ... if present
+Damage Immunities ... if present
+Condition Immunities ... if present
+Senses ...
+Languages ...
+Challenge ...
+blank line
+traits
+blank line
+Actions
+actions
+blank line
+Bonus Actions if present
+blank line
+Legendary Actions if present
+blank line
+Reactions if present
+
+Target template:
+
+Name
+Size type, alignment
+Armor Class X
+Hit Points X (XdY + Z)
+Speed X ft.
+
+STR DEX CON INT WIS CHA
+X (+Y) X (+Y) X (+Y) X (+Y) X (+Y) X (+Y)
+
+Saving Throws ...
+Skills ...
+Damage Vulnerabilities ...
+Damage Resistances ...
+Damage Immunities ...
+Condition Immunities ...
+Senses ..., passive Perception X
+Languages ...
+Challenge X (XP)
+
+Trait Name. Trait text.
+
+Trait Name. Trait text.
+
+Actions
+
+Action Name. Melee Weapon Attack: +X to hit, reach X ft., one target.
+Hit: X (XdY + Z) damage type damage. Extra effect text.
+
+Reactions
+
+Reaction Name. Reaction text.

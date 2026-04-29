@@ -1,0 +1,84 @@
+Use this format if you want the importer to parse a creature cleanly.
+
+1. Put the creature name on the first line by itself.
+
+2. Put the size, type, and alignment on the second line in this format:
+Tiny monstrosity, unaligned
+
+3. Put each of these fields on its own line. Do not combine them:
+Armor Class 13
+Hit Points 10 (3d4 + 3)
+Speed 30 ft., climb 30 ft.
+
+4. Do not use abbreviations for the parser-sensitive headers. Write:
+Armor Class
+Hit Points
+Speed
+Challenge
+Do not write:
+AC
+HP
+CR
+
+5. Format abilities as exactly two lines:
+STR DEX CON INT WIS CHA
+6 (-2) 16 (+3) 12 (+1) 2 (-4) 10 (+0) 3 (-4)
+
+6. Put optional fields on their own lines when present:
+Saving Throws ...
+Skills ...
+Damage Vulnerabilities ...
+Damage Resistances ...
+Damage Immunities ...
+Condition Immunities ...
+Senses ...
+Languages ...
+Challenge 1/4 (50 XP)
+
+7. Every trait name must end with a period. Example:
+Leap Ambusher. If the creature moves at least 10 ft. straight toward a target, it can leap and attempt to attach.
+
+8. Put a blank line between traits and actions.
+
+9. Use the section headers exactly as written when needed:
+Actions
+Bonus Actions
+Legendary Actions
+Reactions
+
+10. Always include an Actions section, even if the creature has no real attack.
+
+11. If the creature has no attack, add a simple action so the importer still has an action block to parse. Example:
+Escape. The creature takes the Dash or Disengage action.
+
+12. Every action name must end with a period.
+
+13. Attack actions should be written in standard 5e style. Example:
+Claw. Melee Weapon Attack: +5 to hit, reach 5 ft., one target.
+Hit: 6 (1d6 + 3) slashing damage.
+
+14. If the source text says something like "5 to hit 1d6+3 slashing damage", rewrite it into the two-line attack format above.
+
+15. Include XP in the Challenge line. Example:
+Challenge 1/2 (100 XP)
+
+16. If the creature has no listed languages, use:
+Languages -
+
+17. If possible, include passive Perception in the Senses line. Example:
+Senses darkvision 60 ft., passive Perception 11
+
+18. Do not add placeholder lines like these unless the source genuinely provides those fields:
+Saving Throws -
+Skills -
+Damage Vulnerabilities -
+Damage Resistances -
+Damage Immunities -
+Condition Immunities -
+If a field is absent, it is usually safer to omit it entirely.
+
+19. Avoid compressed one-line statblocks. The parser is sensitive to layout and punctuation, especially:
+- one field per line
+- exact header names
+- periods after trait/action names
+- standard attack wording
